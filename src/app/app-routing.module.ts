@@ -1,10 +1,27 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { PreloadAllModules, Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+import { HomeComponent } from './home/home.component';
+import { RemerciementComponent } from './remerciement/remerciement.component';
+import { AproposComponent } from './apropos/apropos.component';
+import { ContactComponent } from './contact/contact.component';
+import { NotfoundsComponent } from './notfounds/notfounds.component';
+
+
+
+const routes: Routes = [
+	{ path: '', redirectTo: '/acceuil', pathMatch: 'full' },
+    { path: 'apropos', component: AproposComponent },
+    { path: 'acceuil', component: HomeComponent },
+    { path: 'contact', component: ContactComponent },
+    { path: 'remerciement', component: RemerciementComponent },
+    { path: '**', component: NotfoundsComponent }
+];
+
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+export const routingComponents = [AproposComponent, HomeComponent, ContactComponent, RemerciementComponent, NotfoundsComponent]
