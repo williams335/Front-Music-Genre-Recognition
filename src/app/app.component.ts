@@ -82,8 +82,8 @@ export class AppComponent {
         formData.append('document', file); // upload "File" object rather than a "Blob"
         this.http.post('http://127.0.0.1:8000/result/', formData).subscribe(
           data => {
-            console.log(data);
-            this.Musicgenre = data;
+            console.log(`${JSON.stringify(data)}`)
+            this.Musicgenre = data
           },
         error => console.log(error)
         );
