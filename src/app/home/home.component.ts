@@ -15,7 +15,7 @@ export class HomeComponent {
     title = 'front-music-genre-recognition';
     Musicgenre;
     //Timer
-    timeLeft: number = 12;
+    timeLeft: number = 0;
     interval;
     subscribeTimer: any;
    //Lets initiate Record OBJ
@@ -104,14 +104,16 @@ export class HomeComponent {
 
     startTimer() {
       this.interval = setInterval(() => {
-        if (this.timeLeft > 0) {
-          this.timeLeft--;
+        if (((this.timeLeft % 12) === 0) && (this.timeLeft !== 0)) {
+          this.recordStart();
+          this.timeLeft++;
         } else {
-          this.pauseTimer();
+          this.timeLeft++;
         }
       }, 1000)
     }
-    pauseTimer() {
+  pauseTimer() {
+      this.recordStart();
       clearInterval(this.interval);
       this.timeLeft = 12;
     }
@@ -119,10 +121,10 @@ export class HomeComponent {
   recordStart() {
     this.initiateRecording();
     this.url = null;
-    this.startTimer();
-    const numbers = timer(13000);
-    numbers.subscribe(
-      x => this.stopRecording()
-    );
+    //this.Musicgenre = null;
+    //this.startTimer();
+    //const numbers = timer(13000);
+    this.stopRecording();
+    
   }
 }

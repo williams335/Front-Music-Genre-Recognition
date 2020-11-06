@@ -1,13 +1,15 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   
-    <a (click)="recordStart()" class="btn btn-primary mb-2" *ngIf="!recording"> Start Recording </a>
-      <p *ngIf="recording">{{timeLeft}} Seconds Left....</p> 
+    <a (click)="startTimer()" class="btn btn-primary mb-2" *ngIf="!recording"> Start Recording </a>
+      <p *ngIf="recording"></p> 
       <div class="clearfix"></div>
       <audio controls="" *ngIf="url && !recording">
           <source [src]="sanitize(this.url)" type="audio/wav">
       </audio>
       <h4 *ngIf="Musicgenre && url && !recording" class="capitalize mt-2">{{Musicgenre.genre}}</h4>
   </div>
-  
+
+
+
   
