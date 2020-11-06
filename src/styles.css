@@ -137,7 +137,7 @@
 	}
 }
  h4 {
-	 font-size: 3em;
+	 font-size: 2.7em;
 	 font-family: 'Titan One', san-serif;
 	 background-color: rgba(255, 0, 106, 0.4);
 	 border-radius: 100%;
@@ -146,9 +146,8 @@
 	 position: relative;
 	 text-align: center;
 	 text-shadow: 0 8px 0 rgba(123, 0, 224, 0.4);
-     margin-top: 10%;
-     margin-left: 14%;
-	 width: 800px;
+     margin: 0 auto;
+	 width: auto;
 	 height: auto;
 	 z-index: -1;
 }
@@ -220,4 +219,3 @@
 		 font-family: 'Titan One', san-serif;
 	}
 }
-

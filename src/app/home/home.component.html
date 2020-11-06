@@ -1,14 +1,29 @@
 <!--The content below is only a placeholder and can be replaced.-->
+<h4><span>Music genre recognition</span><br />Record An Audio</h4>
+<div class="circle"></div>
+
 <div style="text-align:center">
   
-    <a (click)="startTimer()" class="btn btn-primary mb-2" *ngIf="!recording"> Start Recording </a>
+    <div id="outerContainer">
+        <div id="container">
+            
+          <div class="item d-flex justify-content-center">
+            <img (click)="startTimer()" *ngIf="!enregistrement" src="../../assets/images/playbutton7.svg" />
+            <img (click)="pausebutton()" *ngIf="enregistrement" src="../../assets/images/pausebutton1.svg" />
+          </div>
+          <div class="circle1" *ngIf="enregistrement" style="animation-delay: 0s"></div>
+          <div class="circle1" *ngIf="enregistrement" style="animation-delay: 1s"></div>
+          <div class="circle1" *ngIf="enregistrement" style="animation-delay: 2s"></div>
+          <div class="circle1" *ngIf="enregistrement" style="animation-delay: 3s"></div>
+        </div>
+    </div>      
       <p *ngIf="recording"></p> 
       <div class="clearfix"></div>
       <audio controls="" *ngIf="url && !recording">
           <source [src]="sanitize(this.url)" type="audio/wav">
       </audio>
-      <h4 *ngIf="Musicgenre && url && !recording" class="capitalize mt-2">{{Musicgenre.genre}}</h4>
-  </div>
+      <h4 *ngIf="Musicgenre && url && !recording" class="capitalize">{{Musicgenre.genre}}</h4>
+</div>
 
 
 

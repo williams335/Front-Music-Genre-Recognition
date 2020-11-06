@@ -22,6 +22,7 @@ export class HomeComponent {
     record;
     //Will use this flag for detect recording
     recording = false;
+    enregistrement = false;
     //Url of Blob
     url;
     BlobUrl;
@@ -86,7 +87,7 @@ export class HomeComponent {
           },
         error => console.log(error)
         );
-        //this.sanitize(this.url);
+        //this.startTimer();
     }
     /**
      * Process Error.
@@ -102,7 +103,8 @@ export class HomeComponent {
       });
     }
 
-    startTimer() {
+  startTimer() {
+      this.enregistrement = true;
       this.interval = setInterval(() => {
         if (((this.timeLeft % 12) === 0) && (this.timeLeft !== 0)) {
           this.recordStart();
@@ -113,9 +115,8 @@ export class HomeComponent {
       }, 1000)
     }
   pauseTimer() {
-      this.recordStart();
       clearInterval(this.interval);
-      this.timeLeft = 12;
+      //this.timeLeft = 12;
     }
   
   recordStart() {
@@ -126,5 +127,12 @@ export class HomeComponent {
     //const numbers = timer(13000);
     this.stopRecording();
     
+  }
+  pausebutton() {
+    this.enregistrement = false;
+    this.recording = false;
+    this.pauseTimer();
+    this.url = null;
+    this.Musicgenre = null;
   }
 }

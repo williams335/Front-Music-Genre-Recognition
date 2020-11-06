@@ -2,6 +2,7 @@ h4.capitalize {
     text-transform: capitalize;
     align-items: center;
     justify-content: center;
+    font-size: 2em;
 }
 
 
@@ -17,9 +18,9 @@ h4.capitalize {
     margin-top: -10vh;
   }
 
-  .circle {
+  .circle1 {
     border-radius: 50%;
-    background-color: deepskyblue;
+    background-color: #FFF;
     width: 150px;
     height: 150px;
     position: absolute;
@@ -35,7 +36,7 @@ h4.capitalize {
   }
 
   .item img {
-    width: 150px;
+    width: 100px;
   }
 
   @keyframes scaleIn {
