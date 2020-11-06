@@ -15,13 +15,14 @@ export class HomeComponent {
     title = 'front-music-genre-recognition';
     Musicgenre;
     //Timer
-    timeLeft: number = 12;
+    timeLeft: number = 0;
     interval;
     subscribeTimer: any;
    //Lets initiate Record OBJ
     record;
     //Will use this flag for detect recording
     recording = false;
+    enregistrement = false;
     //Url of Blob
     url;
     BlobUrl;
@@ -86,7 +87,7 @@ export class HomeComponent {
           },
         error => console.log(error)
         );
-        //this.sanitize(this.url);
+        //this.startTimer();
     }
     /**
      * Process Error.
@@ -102,27 +103,36 @@ export class HomeComponent {
       });
     }
 
-    startTimer() {
+  startTimer() {
+      this.enregistrement = true;
       this.interval = setInterval(() => {
-        if (this.timeLeft > 0) {
-          this.timeLeft--;
+        if (((this.timeLeft % 12) === 0) && (this.timeLeft !== 0)) {
+          this.recordStart();
+          this.timeLeft++;
         } else {
-          this.pauseTimer();
+          this.timeLeft++;
         }
       }, 1000)
     }
-    pauseTimer() {
+  pauseTimer() {
       clearInterval(this.interval);
-      this.timeLeft = 12;
+      //this.timeLeft = 12;
     }
   
   recordStart() {
     this.initiateRecording();
     this.url = null;
-    this.startTimer();
-    const numbers = timer(13000);
-    numbers.subscribe(
-      x => this.stopRecording()
-    );
+    //this.Musicgenre = null;
+    //this.startTimer();
+    //const numbers = timer(13000);
+    this.stopRecording();
+    
+  }
+  pausebutton() {
+    this.enregistrement = false;
+    this.recording = false;
+    this.pauseTimer();
+    this.url = null;
+    this.Musicgenre = null;
   }
 }
