@@ -8,8 +8,8 @@
         <div id="container">
             
           <div class="item d-flex justify-content-center">
-            <img (click)="startTimer()" *ngIf="!enregistrement" src="../../assets/images/playbutton7.svg" />
-            <img (click)="pausebutton()" *ngIf="enregistrement" src="../../assets/images/pausebutton1.svg" />
+            <img id = "play" (click)="startTimer()" *ngIf="!enregistrement" src="../../assets/images/playbutton7.svg" />
+            <img id = "loading" (click)="pausebutton()" *ngIf="enregistrement" src="../../assets/images/pausebutton2.svg" />
           </div>
           <div class="circle1" *ngIf="enregistrement" style="animation-delay: 0s"></div>
           <div class="circle1" *ngIf="enregistrement" style="animation-delay: 1s"></div>
@@ -24,7 +24,6 @@
       </audio>
       <h4 *ngIf="Musicgenre && url && !recording" class="capitalize">{{Musicgenre.genre}}</h4>
 </div>
-
 
 
   

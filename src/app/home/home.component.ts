@@ -104,6 +104,8 @@ export class HomeComponent {
     }
 
   startTimer() {
+      const el = document.querySelector('.item');
+      el.className += ' active';
       this.enregistrement = true;
       this.interval = setInterval(() => {
         if (((this.timeLeft % 12) === 0) && (this.timeLeft !== 0)) {
