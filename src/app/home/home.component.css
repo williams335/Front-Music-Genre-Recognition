@@ -16,6 +16,7 @@ h4.capitalize {
     position: relative;
     margin: 0 auto;
     margin-top: -10vh;
+    z-index: 1;
   }
 
   .circle1 {

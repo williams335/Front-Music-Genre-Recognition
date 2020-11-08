@@ -10,9 +10,9 @@ import { NotfoundsComponent } from './notfounds/notfounds.component';
 
 
 const routes: Routes = [
-	{ path: '', redirectTo: '/acceuil', pathMatch: 'full' },
+	  { path: '', redirectTo: '/accueil', pathMatch: 'full' },
     { path: 'apropos', component: AproposComponent },
-    { path: 'acceuil', component: HomeComponent },
+    { path: 'accueil', component: HomeComponent },
     { path: 'contact', component: ContactComponent },
     { path: 'remerciement', component: RemerciementComponent },
     { path: '**', component: NotfoundsComponent }
