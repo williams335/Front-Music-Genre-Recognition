@@ -16,6 +16,7 @@ h4.capitalize {
     position: relative;
     margin: 0 auto;
     margin-top: -10vh;
+    z-index: 1;
   }
 
   .circle1 {
@@ -37,7 +38,50 @@ h4.capitalize {
 
   .item img {
     width: 100px;
+    cursor: pointer;
   }
+
+  .active{
+
+  }
+
+#loading {
+		animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(359deg);
+		}
+}
+
+#play {
+  animation: shake 1s infinite cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
 
   @keyframes scaleIn {
     from {

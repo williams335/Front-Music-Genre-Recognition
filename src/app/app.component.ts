@@ -9,5 +9,14 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'front-music-genre-recognition';
+  isActive = false;
   constructor(private router: Router) { }
+
+
+
+  toggleMenu() {
+    this.isActive = !this.isActive;
+}
+
+
 }
