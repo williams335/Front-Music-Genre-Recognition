@@ -217,13 +217,29 @@
 
  @media all and (max-width: 980px) {
 	 h4 {
-		 font-size: 3em;
+		 font-size: 1em;
 		 font-family: 'Titan One', san-serif;
 	}
 }
  @media all and (max-width: 480px) {
 	 h4 {
-		 font-size: 2em;
+		 font-size: 1em;
 		 font-family: 'Titan One', san-serif;
 	}
 }
+
+@media screen and (max-width: 560px) {
+	.menu {
+		top: 120px;
+		left: 150px;
+   }
+
+   .menu-container {
+	width: 250px;
+	height: 250px;
+	}
+
+	.overlay ul li {
+    margin-bottom: -30px;
+	}
+  }
