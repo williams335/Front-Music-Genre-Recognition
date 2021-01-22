@@ -1,3 +1,5 @@
+@media screen and (min-width: 980px) {
+
 ul{
     position: absolute;
     top: 50%;
@@ -126,6 +128,8 @@ ul li:hover:nth-child(5) a:after{
     background: linear-gradient(#400080, transparent), linear-gradient(200deg, #d047d1, #ff0000, #ffff00);
     }
 
+}
+
 @media screen and (max-width: 980px) {
     .overlay ul {
         margin-left: -150px;
@@ -134,9 +138,35 @@ ul li:hover:nth-child(5) a:after{
         margin-bottom: -30px;
     }
 
+    #size5{
+        margin-left: 10%;
+    }
+
     h5{
         margin-left: 10%;
-	}
+        font-size: 0.8rem;
+        margin-top: 32%;
+    }
+    
+    ul li{
+        list-style: none;
+        position: relative;
+        display: inline-block;
+        margin-right: 10%;
+        margin-top: 10%;
+    }
+
+    ul li .fa{
+        font-size: 35px;
+        /*color: #262626;*/
+        color: #aecdd2;   
+     }
+    ul li a{
+    width: 70px;
+    height: 80px;
+    justify-content: space-between;
+    margin-right: 10%;
+    }
     
 }
 

@@ -240,6 +240,10 @@
 	}
 
 	.overlay ul li {
-    margin-bottom: -30px;
+    margin-bottom: -40px;
+	}
+
+	.overlay ul li a {
+		font-size: 2rem;
 	}
   }
