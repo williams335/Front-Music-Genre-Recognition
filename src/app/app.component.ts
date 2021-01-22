@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'front-music-genre-recognition';
+  title = 'Front Music Genre Recognition';
   isActive = false;
   constructor(private router: Router) { }
 
