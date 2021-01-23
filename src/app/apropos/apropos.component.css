@@ -109,3 +109,23 @@ h5{
 	background: dodgerblue;
 	color: white;
 }
+
+
+@media screen and (max-width: 980px) {
+
+    #size5{
+        margin-left: 10%;
+    }
+
+    h5{
+        margin-left: 10%;
+        font-size: 0.8rem;
+        margin-top: 32%;
+	}
+	
+	.card {
+		width: 200px;
+		height: 110px;
+		margin-right: 7px;
+	}
+}
