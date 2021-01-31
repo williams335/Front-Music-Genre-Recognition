@@ -83,7 +83,8 @@ export class HomeComponent {
         this.http.post('http://127.0.0.1:8000/result/', formData).subscribe(
           data => {
             console.log(`${JSON.stringify(data)}`)
-            this.Musicgenre = data
+            console.log(data.genre.split("\\")[40].split(":")[2].split("\"")[1])
+            this.Musicgenre = data.genre.split("\\")[40].split(":")[2].split("\"")[1]
           },
         error => console.log(error)
         );

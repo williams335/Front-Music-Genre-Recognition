@@ -22,7 +22,7 @@
       <audio controls="" *ngIf="url && !recording">
           <source [src]="sanitize(this.url)" type="audio/wav">
       </audio>
-      <h4 *ngIf="Musicgenre && url && !recording" class="capitalize">{{Musicgenre.genre}}</h4>
+      <h4 *ngIf="Musicgenre && url && !recording" class="capitalize">{{Musicgenre}}</h4>
 </div>
 
 

@@ -145,6 +145,7 @@ ul li:hover:nth-child(5) a:after{
     h5{
         margin-left: 10%;
         font-size: 0.8rem;
+        color: white;
         margin-top: 32%;
     }
     
@@ -159,7 +160,7 @@ ul li:hover:nth-child(5) a:after{
     ul li .fa{
         font-size: 35px;
         /*color: #262626;*/
-        color: #aecdd2;   
+        color: #FFFFFF;   
      }
     ul li a{
     width: 70px;
